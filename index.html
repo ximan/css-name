@@ -149,14 +149,22 @@ $(function(){
         $('.search .num').text(sum);
 
         var list = [];
+        var list2 = [];
         var $h3 = $('.item h3');
+        var $val = $('.ipt_val');
+
         // 把所有H3标题都加入数组
         for(var i = 0; i < $h3.length; i++){
             list.push($h3.eq(i).text());
         }
 
+        for(var i = 0; i < $val.length; i++){
+            list2.push($val.eq(i).val());
+        }
+
         // 搜索关键字
         $('.search_ipt').on('keyup',function(){
+            var flag = false;
             var val = $(this).val();
             clearTimeout(timer);
             timer = setTimeout(function(){
@@ -165,12 +173,30 @@ $(function(){
                     for(var i = 0; i < list.length; i++){
                         // 循环数组，标题与搜索框里值做匹配
                         var result = list[i].indexOf(val);
-                        if(result == '-1'){
+                        if (result == -1) {
                             $h3.eq(i).parents('.item').hide();
-                        }else{
+                        } else {
                             $h3.eq(i).parents('.item').show();
+                            flag = true;
                         }
                     }
+                    if (!flag) {
+                        for(var j = 0; j < list2.length; j++){
+                            // 循环数组，标题与搜索框里值做匹配
+                            var result = list2[j].indexOf(val);
+                            var parent;
+                            if ($val.eq(j).parents(".item").index(".item") == parent) {
+                                continue;
+                            }
+                            if (result == -1) {
+                                $val.eq(j).parents('.item').hide();
+                            } else {
+                                $val.eq(j).parents('.item').show();
+                                parent = $val.eq(j).parents(".item").index(".item")
+                            }
+                        }
+                    }
+                    
                 }else{
                     // 全部展示
                     $('.item').show();
