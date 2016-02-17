@@ -13,12 +13,17 @@ body{
 }
 .clearfix:after{display:block;content:".";height:0;visibility:hidden;clear:both;font-size:0;line-height:0;}
 .clearfix{*zoom:1;}
+a{
+    color: #000;
+    text-decoration: none;
+}
 .wrap{
     width: 980px;
     margin: 0 auto;
 }
 .search{
     background-color: #ff7373;
+    color: #fff;
 }
 .search .wrap{
     position: relative;
@@ -30,11 +35,9 @@ body{
     height: 50px;
     line-height: 50px;
     font-size: 32px;
-    color: #fff;
 }
 .search .desc{
     float: right;
-    color: #fff;
 }
 .search_box{
     clear: both;
@@ -50,6 +53,7 @@ body{
 }
 .result{
     width: 940px;
+    min-height: 400px;
     padding: 50px 20px;
 }
 .result .item{
@@ -71,6 +75,17 @@ body{
     border: none;
     font-size: 14px;
     cursor: pointer;
+}
+.footer{
+    background-color: #ff7373;
+    color: #fff;
+}
+.footer .wrap{
+    line-height: 30px;
+    padding: 20px;
+}
+.footer a{
+    color: #fff;
 }
 
 @media (max-width: 980px){
@@ -103,6 +118,12 @@ body{
     </div>
 </div>
 <div class="result wrap"></div>
+<div class="footer">
+    <div class="wrap">
+        作者：<a href="http://ons.me/" target="blank">西门</a>
+        <a href="https://github.com/ximan/css-name" target="blank">GitHub</a>
+    </div>
+</div>
 
 <script src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script>
 <script>
