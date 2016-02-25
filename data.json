@@ -125,6 +125,20 @@
         ]
     },
     {
+        "cn": "信息",
+        "en": [
+            "information",
+            "info",
+            "message"
+        ]
+    },
+    {
+        "cn": "消息，留言",
+        "en": [
+            "message"
+        ]
+    },
+    {
         "cn": "项目",
         "en": [
             "item",
@@ -175,6 +189,28 @@
         ]
     },
     {
+        "cn": "价格",
+        "en": [
+            "price"
+        ]
+    },
+    {
+        "cn": "原价",
+        "en": [
+            "original price",
+            "old price",
+            "Initial price"
+        ]
+    },
+    {
+        "cn": "现价，最新价",
+        "en": [
+            "new price",
+            "now price",
+            "last price"
+        ]
+    },
+    {
         "cn": "折扣",
         "en": [
             "discount"
@@ -200,6 +236,27 @@
         "cn": "推荐",
         "en": [
             "recommend"
+        ]
+    },
+    {
+        "cn": "大",
+        "en": [
+            "large",
+            "big"
+        ]
+    },
+    {
+        "cn": "中",
+        "en": [
+            "middle",
+            "medium"
+        ]
+    },
+    {
+        "cn": "小",
+        "en": [
+            "small",
+            "petite"
         ]
     },
     {
